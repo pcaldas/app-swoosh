@@ -50,6 +50,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ccZ-AI-B8M" kind="show" id="QXf-Nq-dnQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLr-Ip-jeW">
                                 <rect key="frame" x="57.5" y="185" width="260" height="33"/>
@@ -164,6 +167,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6A-S3-i6R">
+                                <rect key="frame" x="19.5" y="30" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Ljw-to-qPg"/>
+                                    <constraint firstAttribute="width" constant="29" id="VB8-It-LRO"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="s4P-rH-E5H" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="FCZ-mT-ffD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -175,16 +189,19 @@
                             <constraint firstItem="f3N-ag-feh" firstAttribute="bottom" secondItem="Mrs-8S-dI5" secondAttribute="bottom" id="KYo-kH-EKO"/>
                             <constraint firstItem="f3N-ag-feh" firstAttribute="top" secondItem="KtP-K8-Opt" secondAttribute="top" id="Ld3-GE-fdH"/>
                             <constraint firstItem="f3N-ag-feh" firstAttribute="leading" secondItem="Mrs-8S-dI5" secondAttribute="leading" id="NOs-Iq-Yq1"/>
+                            <constraint firstItem="Q6A-S3-i6R" firstAttribute="top" secondItem="Mrs-8S-dI5" secondAttribute="top" constant="10" id="RK7-ku-gjU"/>
                             <constraint firstItem="Ixk-HO-AuB" firstAttribute="top" secondItem="Mrs-8S-dI5" secondAttribute="top" constant="20" id="UhF-wd-7wc"/>
                             <constraint firstItem="Ixk-HO-AuB" firstAttribute="leading" secondItem="Mrs-8S-dI5" secondAttribute="leading" constant="20" id="YSI-PC-ZWf"/>
                             <constraint firstItem="Mrs-8S-dI5" firstAttribute="bottom" secondItem="2gA-db-X2D" secondAttribute="bottom" constant="20" id="jSt-wQ-mZ0"/>
                             <constraint firstItem="2gA-db-X2D" firstAttribute="leading" secondItem="Mrs-8S-dI5" secondAttribute="leading" constant="20" id="lw7-IL-fjN"/>
                             <constraint firstItem="uT1-vr-WrE" firstAttribute="top" secondItem="Ixk-HO-AuB" secondAttribute="bottom" constant="50" id="nc7-rk-gCL"/>
+                            <constraint firstItem="Q6A-S3-i6R" firstAttribute="leading" secondItem="Mrs-8S-dI5" secondAttribute="leading" constant="20" id="wIA-qc-Fy8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mrs-8S-dI5"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uap-Bs-7Cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="s4P-rH-E5H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="642.39999999999998" y="131.78410794602701"/>
         </scene>
@@ -279,6 +296,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
